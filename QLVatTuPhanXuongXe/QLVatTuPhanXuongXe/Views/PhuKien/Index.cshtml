@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "PHỤ KIỆN";
+}
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        outline: 0;
+    }
+    .box {
+        text-align: left;
+        border: double;
+        border-radius: 5px;
+        border-width: 1px;
+        width: 500px;
+        height: 500px;
+        background: linear-gradient(90deg, rgba(233,76,161,1) 0%, rgba(199,74,233,1) 100%);
+        background: rgb(233,76,161);
+        background: -moz-linear-gradient(90deg, rgba(233,76,161,1) 0%, rgba(199,74,233,1) 100%);
+        background: -webkit-linear-gradient(90deg, rgba(233,76,161,1) 0%, rgba(199,74,233,1) 100%);
+        padding: 20px;
+        margin-top: 100px;
+        margin-right: auto;
+        margin-bottom: 0;
+        margin-left: auto;
+    }
+    .input-here {
+        padding: 5px;
+        font-weight: bold;
+        font-size: 1em;
+        display: inline-block;
+        width: 25%;
+    }
+</style>
+
+<body>
+    @{Html.BeginForm("Action", "Controller");}
+    <div class="box">
+        <h1>THÔNG TIN PHỤ KIỆN</h1>
+        <div class="input-here">
+            MÃ PHỤ KIỆN: @Html.TextBox("MaPK") <br />
+            TÊN PHỤ KIỆN: @Html.TextBox("NamePK") <br />
+            MÃ NƯỚC: @Html.TextBox("NamePK") <br />
+            ĐƠN GIÁ: @Html.TextBox("ĐG") <br />
+            SỐ LƯỢNG TỒN TẠI THỰC TẾ: @Html.TextBox("SLTT") <br />
+
+            GHI CHÚ: @Html.TextArea("Note") <br />
+            <input type="submit" value="Đồng Ý" /> <input type="submit" value="Hủy" />
+        </div>
+    </div>
+</body>
